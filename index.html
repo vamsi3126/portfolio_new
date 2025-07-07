@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vamsi Gattikoppula | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      background: linear-gradient(to right, rgb(232, 246, 239), rgb(185, 234, 204), rgb(104, 184, 136));
+      color: #333;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .hero-section {
+      text-align: left;
+      padding: 100px 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      color: rgb(30, 57, 50);
+      text-shadow: 4px 4px 5px rgba(98, 98, 98, 0.6);
+      margin-bottom: 20px;
+    }
+
+    .highlight,.highlights {
+      color: rgb(30, 57, 50);
+      font-weight: bold;
+      
+    }
+    .highlight1{
+      color: rgb(30, 57, 50);
+      font-size: 4.3rem;
+    }
+
+    .hero-text p {
+      color: rgb(21, 106, 83);
+      font-size: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      margin-right: 15px;
+      color: rgba(21, 106, 83, 0.8);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: font-size 0.3s;
+    }
+
+    .social-links a:hover {
+      font-size: 2rem;
+      color: rgb(3, 94, 70);
+    }
+
+    .profile-img {
+      border: 5px solid transparent;
+      backdrop-filter: blur(8px);
+      mask-image: linear-gradient(to left, rgb(0, 0, 0) 60%, transparent 100%);
+      border-radius: 50%;
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      margin-top: 20px;
+    }
+
+    .navbar {
+      background: linear-gradient(to left, rgb(232, 246, 239), rgb(185, 234, 204), rgb(104, 184, 136));
+      padding: 25px 30px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: inline-flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .nav-link {
+      margin: 0 20px;
+      color: rgba(21, 106, 83, 0.8);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+      transition: color 0.3s, font-size 0.3s;
+    }
+
+    .nav-link:hover {
+      color: rgb(3, 94, 70);
+      font-size: 2rem;
+    }
+
+    .section {
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: rgba(1, 58, 43, 0.8);
+      text-align: center;
+      margin-top: 50px;
+
+    }
+
+    .section-description{
+      font-size: larger;
+      font-weight: 400;
+    }
+
+    .project-card {
+      background-color: transparent;
+      color: black;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 280px;
+      box-shadow: 20px 4px 40px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      transition: all 0.3s;
+      display: flexbox;
+    }
+    
+    .project-card:hover {
+      transform: scale(1.05);
+
+    }
+    .project-card:hover img{
+      transform: scale(1.11);
+    }
+
+    .project-img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 10px;
+      transition: transform, 0.3s;
+    }
+
+    .project-link {
+      display: grid;
+      margin-top: 10px;
+      color: rgb(10, 124, 107);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .project-link:hover {
+      color: rgb(6, 79, 66);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .skill-card {
+      background-color: transparent;
+      color: rgb(0, 156, 99);
+      padding: 15px 25px;
+      font-size: 1.5rem;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 100px;
+    }
+    .skill-card:hover {
+      background: linear-gradient(to top,transparent,rgb(34, 203, 152));
+      border: 50% solid transparent;
+      transform: translateY(-5px);
+      font-size: 1.7rem;
+    }
+
+    .contact-info {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+    
+
+    .a22 {
+      color: rgb(51, 51, 51);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color, 0.2s;
+    }
+    .a22:hover{
+      color: rgba(1, 102, 55, 0.635);
+    }
+
+    footer {
+      background: rgb(0, 0, 0);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: rgb(136, 136, 136);
+      margin-top: 40px;
+    }
+    .education-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .education-card {
+      background: transparent;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      box-shadow: 10px 4px 40px rgba(0,0,0,0.5);
+      text-align: center;
+      transition: tranform,0.3s;
+    }
+    .education-card:hover{
+      transform: translateY(-8px);
+    }
+
+    .education-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .education-card h3 {
+      font-size: 1.2rem;
+      color: rgb(34, 34, 34);
+    }
+    img {
+      overflow-clip-margin: content-box;
+      overflow: clip;
+    }
+    .logo{
+      background: transparent;
+      border-radius: 50%;
+      margin: 0 20px;
+      height: 50px;
+      align-content: center;
+    }
+  </style>
+</head>
+<body class="portfolio-body">
+  
+  <section id="home" class section>
+    <header class="hero-section">
+      <div class="hero-text">
+        <h1>Hello, it's Me<br><span class="highlight">Vamsi</span><span class="highlight1"> Gattikoppula</span></h1>
+        <p class="typewriter">And I'm a <span class="highlights">Frontend Developer . . .</span></p>
+        <p>Looking forward to crafting responsive, user-friendly websites and applications.</p>
+        <div class="social-links">
+          <a style="text-decoration: underline;" href="https://www.linkedin.com/in/vamsi-gattikoppula-838v2">LinkedIn</a>
+          <a style="text-decoration: underline;" href="https://github.com/vamsi3126">GitHub</a>
+        </div>
+      </div>
+      <img src="8382.jpg" class="profile-img" alt="Vamsi Gattikoppula's Profile Picture">
+    </header>
+  </section>
+
+  <nav class="navbar">
+    <img src="logo.png" alt="My Logo" class="logo">
+    <div>
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="vamsi_resume.pdf" class="nav-link" download>Download CV</a>
+    </div>
+  </nav>
+
+  <section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-description" style="text-align:center;">B.Tech Computer Science student at VIT-AP University, passionate about frontend development, UI/UX, and building impactful web applications. Member of the Photography and Machine Learning Clubs. Expected to graduate in 2026.</p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <a href="https://vamsi3126.github.io/HOSPITAL_MANAGEMENT_SYSTEM_111/"><img src="HMS.png" alt="Nxt Trendz" class="project-img"></a>
+        <h3 style="font-weight: bold;">Hospital Management System</h3>
+        <p class="section-description">An eCommerce platform showcasing a Simple Hospital Web Portal . . .</p>
+        <a href="https://github.com/vamsi3126/HOSPITAL_MANAGEMENT_SYSTEM_111" class="project-link">GitHub Repo</a>
+        <a href="https://vamsi3126.github.io/HOSPITAL_MANAGEMENT_SYSTEM_111/" class="project-link">Direct Link</a>
+        <a href="certificate.pdf" class="project-link">Certification</a>
+      </div>
+      <div class="project-card">
+        <a href="https://ghrjixcev7vftrraq1jkca.on.drv.tw/www.TTT-game.com/tictactoe.html"><img src="tic-tac-toe.png" alt="TIC-TAC-TOE" class="project-img"></a>
+        <h3>Tic - Tac - Toe</h3>
+        <p class="section-description">A Simple Front-End Web Game Designed and Developed</p>
+        <a href="https://github.com/vamsi3126/TTT" class="project-link">GitHub Repo</a>
+        <a href="https://ghrjixcev7vftrraq1jkca.on.drv.tw/www.TTT-game.com/tictactoe.html" class="project-link">Direct Link</a>
+      </div>
+      <div class="project-card">
+        <a href="https://ghrjixcev7vftrraq1jkca.on.drv.tw/www.calculator.com/calculator.html"><img src="calculator.png" alt="Basic-Calculator" class="project-img"></a>
+        <h3>Basic Calculator</h3>
+        <p class="section-description">A Simple Calculator to perform arithmetic operations . . .</p>
+        <a href="https://github.com/vamsi3126/01.calculator/blob/main/calculator.html" class="project-link">GitHub Repo</a>
+        <a href="https://ghrjixcev7vftrraq1jkca.on.drv.tw/www.calculator.com/calculator.html" class="project-link">Direct Link</a>
+      </div>
+      <div class="project-card">
+        <a href="https://ghrjixcev7vftrraq1jkca.on.drv.tw/www.RPS-game.com/game.html"><img src="RPS.png" alt="Rock-Paper-Scisors" class="project-img"></a>
+        <h3>Rock-Paper-Scisors</h3>
+        <p class="section-description">Developed Using Functions And Array</p>
+        
+        <a href="https://github.com/vamsi3126/RPS" class="project-link">GitHub Repo </a>
+        <a href="https://ghrjixcev7vftrraq1jkca.on.drv.tw/www.RPS-game.com/game.html" class="project-link">Direct Link</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">Java</div>
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Node.js</div>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-grid">
+      <div class="education-card">
+        <img src="graduation.png" alt="VIT-AP University,Amaravati" />
+        <h3>Bachelor of Science in Computer Science</h3>
+        <p>VIT-AP University, 2022–2026(pursuing)</p>
+        <small>CGPA : 8.05</small>
+      </div>
+
+      <div class="education-card">
+        <img src="inter.png" alt="Tirumala Junior College Class 12" />
+        <h3>Tirumala Junior College (Class 12)</h3>
+        <p>MPC, 2020–2022</p>
+        <small>954/1000</small>
+      </div>
+
+      <div class="education-card">
+        <img src="school.png" alt="Chaitanya Class 10" />
+        <h3>Chaitanya E.M. High School (Class 10)</h3>
+        <p>2020 Pass-out</p>
+        <small>470/600</small>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+    <p class="contact-info">Email: <a class="a22" href="mailto:vamsigattikoppula@gmail.com">vamsigattikoppula@gmail.com</a></p>
+    <p class="contact-info">Mobile: <a class="a22" href="tel:+919392407273">+91 9392407273</a></p>
+    <p class="contact-info">LinkedIn: <a class="a22" href="https://www.linkedin.com/in/vamsi-gattikoppula-838v2" target="_blank">Veiw Profile</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vamsi Gattikoppula. All rights reserved.</p>
+  </footer>
+</body>
+</html>
