@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            body{
+                background: linear-gradient(to right, rgb(232, 246, 239), rgb(185, 234, 204), rgb(104, 184, 136));
+            }
+            .certificates{
+                height: 200px;
+                padding: 40px;
+                transition: all 0.2s;
+                border-radius: 8px;
+                background: linear-gradient(to top, rgb(232, 246, 239), rgb(185, 234, 204), rgb(104, 184, 136));
+                margin: 1rem;
+            }
+            .certificates:hover{
+                height: 220px;
+                padding-bottom: 30px;
+                padding-top: 30px;
+                padding-left: 26px;
+                padding-right: 25px;
+            }
+            
+            p,a{
+                margin-right: 15px;
+                color: rgba(21, 106, 83, 0.8);
+                font-weight: bold;
+                text-decoration: none;
+                font-size: 0.5rem;
+                transition: font-size 0.3s;
+            }
+            a:hover,p:hover{
+                color: rgb(3, 94, 70);
+            }
+            .certificate-card {
+                background-color: transparent;
+                color: black;
+                border-radius: 10px;
+                padding: 15px;
+                box-shadow: 20px 4px 40px rgba(0, 0, 0, 0.4);
+                text-align: center;
+                margin: 40px;
+                transition: all 0.3s;
+                display: -ms-flexbox;
+            }
+    
+            .certificate-card:hover {
+                transform: scale(1.08);
+            }
+            .certificate-card:hover img{
+                transform: scaleX(-5px);
+                border-radius: 10px;
+            }
+
+            .certificate-img {
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
+                margin-bottom: 10px;
+                transition: all, 0.3s;
+            }
+            .certificate-link,.h3 {
+                display: grid;
+                margin-top: 10px;
+                color: rgb(10, 124, 107);
+                font-weight: bold;
+                text-decoration: none;
+                font-size: 1.5rem;
+            }
+            .h3{
+                color: black;
+            }
+            .certificate-link:hover {
+                color: rgb(6, 79, 66);
+            }
+
+            .certificate-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                justify-content: center;
+                gap: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="certificate-grid">
+            <div class="certificate-card">
+                <a href="mern_certificate.pdf"><img class="certificate-img" src="mern_certificate.png"></a>
+                <p class="certificate-link">Certificate ID: <p class="h3">6MPWQNLC</p> </p>
+                <p class="certificate-link">Validate at :<a style="text-decoration: underline;" class="certificate-link" href="https://ethnus.com/certverify">https://ethnus.com/certverify]</a></p>
+            </div>
+            <div class="certificate-card">
+                <a href="AI_SKILL_CERTIFICATE.pdf"><img class="certificate-img" src="ai_skill_certificate.png"></a>
+                <h3 class="certificate-link">Issued by EY and Microsoft </h3>
+                <a style="text-decoration: underline;" class="certificate-link" href="https://gsp.ey.com/">Click here</a>
+            </div>
+        </div>
+        
+    </body>
+</html>
