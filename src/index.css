@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap');
+
+:root {
+  --bg-primary: #050a08;
+  --bg-secondary: #0a1410;
+  --bg-tertiary: rgba(16, 30, 24, 0.7);
+  
+  --accent-light: #5de4b3;
+  --accent-main: #10b981;
+  --accent-dark: #047857;
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+  
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%2310b981" stroke="%23ffffff" stroke-width="2"><path d="M4 4l5.5 16.5 3-7.5 7.5-3z"/></svg>') 4 4, auto;
+}
+
+a, button, .btn, .project-card, .skill-badge {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%235de4b3" stroke="%23050a08" stroke-width="2"><circle cx="12" cy="12" r="6"/></svg>') 12 12, pointer !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-primary);
+}
+
+/* Utilities */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-light), var(--accent-main));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.container {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+}
+
+/* Global Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent-main);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent-light);
+  border: 1px solid var(--accent-main);
+}
+
+.btn-outline:hover {
+  background: rgba(16, 185, 129, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}
