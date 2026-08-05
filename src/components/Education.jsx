@@ -12,13 +12,13 @@ const education = [
     title: 'Class 12 (MPC)',
     institution: 'Tirumala Junior College',
     date: '2020 - 2022',
-    details: '954 / 1000'
+    details: '95.4%'
   },
   {
     title: 'Class 10',
     institution: 'Chaitanya E.M. High School',
     date: '2020 Pass-out',
-    details: '470 / 600'
+    details: '78.3%'
   }
 ];
 
