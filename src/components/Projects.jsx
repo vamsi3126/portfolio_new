@@ -80,7 +80,9 @@ const Projects = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="project-card"
           >
-            <img src={project.image} alt={project.title} className="project-image" />
+            <a href={project.demo} target="_blank" rel="noreferrer" style={{ display: 'block' }}>
+              <img src={project.image} alt={project.title} className="project-image" />
+            </a>
             <div className="project-content">
               <h3 className="project-title">{project.title}</h3>
               <p className="project-desc">{project.description}</p>
