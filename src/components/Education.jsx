@@ -18,7 +18,7 @@ const education = [
     title: 'Class 10',
     institution: 'Chaitanya E.M. High School',
     date: '2020 Pass-out',
-    details: '78.3%'
+    details: '79%'
   }
 ];
 

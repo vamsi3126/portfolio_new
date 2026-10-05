@@ -1,6 +1,6 @@
 import React from 'react';
-import { Mail, Phone, User } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
+import { Mail, Phone } from 'lucide-react';
+import { FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -22,7 +22,7 @@ const Contact = () => {
             <FaWhatsapp size={28} />
           </a>
           <a href="https://www.linkedin.com/in/vamsi-gattikoppula-838v2" target="_blank" rel="noreferrer" className="social-link" title="LinkedIn">
-            <User size={24} />
+            <FaLinkedin size={24} />
           </a>
         </div>
       </div>
